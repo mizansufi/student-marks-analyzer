@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Marks Analyzer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <p class="eyebrow">ACADEMIC PERFORMANCE TOOL</p>
+      <h1>Student Marks Analyzer</h1>
+      <p>Enter student details and subject marks to generate a performance report.</p>
+    </header>
+
+    <section class="panel">
+      <h2>Student Details</h2>
+      <div class="grid details">
+        <label>Student Name<input id="studentName" type="text" placeholder="e.g. Rahul Kumar"></label>
+        <label>Roll Number<input id="rollNo" type="text" placeholder="e.g. 101"></label>
+        <label>Department<input id="department" type="text" placeholder="e.g. Computer Science"></label>
+      </div>
+
+      <h2 class="subject-heading">Subject Marks <span>Enter marks out of 100</span></h2>
+      <div class="grid subjects">
+        <label>Physics<input class="mark" id="physics" type="number" min="0" max="100" placeholder="0–100"></label>
+        <label>Chemistry<input class="mark" id="chemistry" type="number" min="0" max="100" placeholder="0–100"></label>
+        <label>Mathematics<input class="mark" id="mathematics" type="number" min="0" max="100" placeholder="0–100"></label>
+        <label>English<input class="mark" id="english" type="number" min="0" max="100" placeholder="0–100"></label>
+        <label>Computer Science<input class="mark" id="computer" type="number" min="0" max="100" placeholder="0–100"></label>
+      </div>
+      <button id="analyzeBtn" type="button">Analyze Marks <span>→</span></button>
+      <p id="error" class="error" role="alert"></p>
+    </section>
+
+    <section class="report panel" id="report" hidden>
+      <div class="report-top">
+        <div><p class="eyebrow">YOUR RESULT</p><h2>Performance Report</h2></div>
+        <span id="gradeBadge" class="badge">Good</span>
+      </div>
+      <p class="student-line" id="studentSummary"></p>
+      <div class="stats">
+        <article class="stat"><span>Total Marks</span><strong id="total">0/500</strong></article>
+        <article class="stat"><span>Percentage</span><strong id="percentage">0%</strong></article>
+        <article class="stat"><span>Highest Mark</span><strong id="highest">0</strong></article>
+        <article class="stat"><span>Lowest Mark</span><strong id="lowest">0</strong></article>
+        <article class="stat"><span>Subjects Passed</span><strong id="passed">0/5</strong></article>
+      </div>
+      <p class="note">Passing mark: 40 in each subject.</p>
+    </section>
+    <footer>Student Marks Analyzer · JavaScript Assignment</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
